@@ -14,6 +14,9 @@ use Tymon\JWTAuth\PayloadFactory;
 use Tymon\JWTAuth\JWTManager as JWT;
 class UserController extends Controller
 {
+    public function __construct(){
+     $this->middleware('cors');
+    }
     
     protected function register(Request $request)
     {

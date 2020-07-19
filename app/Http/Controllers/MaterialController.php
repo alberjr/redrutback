@@ -12,6 +12,9 @@ class MaterialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct(){
+      $this->middleware('cors');
+     }
     public function index()
     {
         //echo $request;

@@ -11,6 +11,9 @@ class RutaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct(){
+        $this->middleware('cors');
+       }
     public function index(Request $request)
     {
         $ruta = Ruta::where('rutas.ruta_user_creador','=',$request->json()->get('userid'))        

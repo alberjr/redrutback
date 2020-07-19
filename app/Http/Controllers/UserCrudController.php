@@ -11,6 +11,9 @@ class UserCrudController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct(){
+        $this->middleware('cors');
+       }
     public function index(Request $request)
     {
         //echo $request;

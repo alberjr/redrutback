@@ -11,6 +11,9 @@ class Rutas_macrorutaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct(){
+      $this->middleware('cors');
+     }
     public function getrutamacrorutas(Request $request)
     {
         $rutas_macroruta = Rutas_macroruta::select(array('rutas_macrorutas.id,rutas_macroruta_ruta_id,ruta_name,rutas_macroruta_macroruta_id,macroruta_name,rutas_macroruta_user_creador'))

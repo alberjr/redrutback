@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comprasxruta;
-
 use DB;
 class ComprasxrutaController extends Controller
 {
@@ -14,6 +13,10 @@ class ComprasxrutaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct(){
+      $this->middleware('cors');
+     }
     public function index(Request $request)
     {
         //echo $request;
